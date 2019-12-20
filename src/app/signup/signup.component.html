@@ -1,0 +1,214 @@
+<!-- 
+  <div class="formclass">
+      
+          <div>
+                
+              <form>
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                                <h1>Creative Signup Form</h1>
+                                <div  fxLayout="column" fxLayoutAlign="space-around start" >
+                                <input type="text" placeholder="Username">   
+                                <input type="text" placeholder="Email">
+                                <input type="text" placeholder="Password">
+                                <input type="text" placeholder="ConfirmPassword">
+                                <div fxLayout="column " fxLayoutAlign="space-around start" >
+                                        <input type="checkbox">
+                                    <label> Remember me</label>
+                                
+                                <input type="submit" value="SIGN UP">
+                                </div>
+                            </div>
+                  </div>
+                     
+          </form>
+        </div>
+     
+    </div> -->
+    <div class="formclass" fxLayout="row" fxLayoutAlign="center center">
+   
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()"> 
+                     
+                                 <h2>Signup Form</h2>
+                                
+                                 <div class="form row">
+                                        <div class="form-group col-md-6" >
+                                            <input type="text" class="form-control"  placeholder="First Name" formControlName="firstname" [ngClass]="{ 'is-invalid':(get.firstname.dirty || get.firstname.touched) && get.firstname.errors }">
+                                            <div *ngIf="(get.firstname.dirty || get.firstname.touched) && get.firstname.errors" class="invalid-feedback">
+                                                <div *ngIf="get.firstname.errors.required">First Name is required</div>
+                                                <div *ngIf="get.firstname.errors.minlength">minlength must be at least 2</div>
+                                                <div *ngIf="get.firstname.errors.maxlength">Maxlength should be 20 Char</div> 
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                                <input type="text" class="form-control"  placeholder="Last Name" formControlName="lastname" [ngClass]="{ 'is-invalid': (get.lastname.dirty || get.lastname.touched) && get.lastname.errors }">
+                                                <div *ngIf="(get.lastname.dirty || get.lastname.touched) && get.lastname.errors" class="invalid-feedback">
+                                                     <div *ngIf="get.lastname.errors.required">Last Name is required</div>
+                                                     <div *ngIf="get.lastname.errors.minlength">minlength must be at least 2</div>
+                                                        <div *ngIf="get.lastname.errors.maxlength">Maxlength should be 20 Char</div> 
+                                                </div> 
+                                        </div>
+                                    </div>
+                                    <div class="form row">
+                                            <div class="form-group col-md-6">
+                                                    <input type="text" class="form-control"  placeholder="User Name" formControlName="username" [ngClass]="{ 'is-invalid': (get.username.dirty || get.username.touched) && get.username.errors }">
+                                                    <div *ngIf="(get.username.dirty || get.username.touched) && get.username.errors" class="invalid-feedback">
+                                                        <div *ngIf="get.username.errors.required">User Name is required</div>
+                                                        <div *ngIf="get.username.errors.minlength">minlength must be at least 2</div>
+                                                        <div *ngIf="get.username.errors.maxlength">Maxlength should be 20 Char</div>
+                                                   </div>   
+                                            </div>
+                                            
+                    
+                                        <div class="form-group col-md-6" >
+                                            <input type="text" class="form-control"  placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': (get.email.dirty || get.email.touched) && get.email.errors }">
+                                            <div *ngIf="(get.email.dirty || get.email.touched) && get.email.errors" class="invalid-feedback">
+                                                <div *ngIf="get.email.errors.required">Email  is required</div>
+                                                 <div *ngIf="get.email.errors.email">Email must be a valid email address</div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form row">
+                                            <div class="form-group col-md-6">
+                                              <input type="text" class="form-control"  placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': (get.password.dirty || get.password.touched) && get.password.errors }">
+                                              <div *ngIf="(get.password.dirty || get.password.touched) && get.password.errors" class="invalid-feedback">
+                                                  <div *ngIf="get.password.errors?.required">Password  is required</div>
+                                                  <div *ngIf="get.password.errors">Invalid Password</div>
+                                               </div>
+                                              
+                                            </div>   
+                                        <div class="form-group col-md-6">
+                                            <input type="text" class="form-control"  placeholder="ConfirmPassword" formControlName="cnfpassword" [ngClass]="{ 'is-invalid': (get.cnfpassword.dirty || get.cnfpassword.touched) && get.cnfpassword.errors }">
+                                            <div *ngIf="(get.cnfpassword.dirty || get.cnfpassword.touched)  && get.cnfpassword.errors" class="invalid-feedback">
+                                                <div *ngIf="get.cnfpassword.errors?.required">Confirm Password required</div>
+                                                <div *ngIf="get.cnfpassword.errors">Not matched </div>
+                                           </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form row">
+                                            <div class="form-group col-md-6">
+                                                  <label>Type</label>
+                                                    <select class="form-control" formControlName="type" [ngClass]="{ 'is-invalid': (get.type.dirty || get.type.touched)  && get.type.errors }" >
+                                                      <option>Migration Agent</option>
+                                                      <option>Fincial Agent</option>
+                                                      <option>Goverment</option>
+                                                      <option>Education Provider</option>
+                                                      <option>Lawyer</option>
+                                                    </select>
+                                                    <div *ngIf="(get.type.dirty || get.type.touched)  && get.type.errors" class="invalid-feedback">
+                                                        <div *ngIf="get.type.errors.required">Type is required</div>
+                                                   </div>
+                                                  </div>
+                                                  
+                                    </div>
+                                    
+                                         <div class="form row">
+                                            
+                                                  <div class="form-group col-md-6">
+                                                        <label>Country</label>
+                                                          <select class="form-control" formControlName="country" [ngClass]="{ 'is-invalid': (get.country.dirty || get.country.touched) && get.country.errors }" >
+                                                            <option>india</option>
+                                                            <option>america</option>
+                                                            <option>us</option>  
+                                                          </select>
+                                                          <div *ngIf="(get.country.dirty || get.country.touched) && get.country.errors" class="invalid-feedback">
+                                                                <div *ngIf="get.country.errors required">Country is required</div>
+                                                           </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                                <label>City</label>
+                                                                  <select class="form-control" formControlName="city" [ngClass]="{ 'is-invalid': (get.city.dirty || get.city.touched) && get.city.errors }">
+                                                                    <option>pune</option>
+                                                                    <option>mumbai</option>
+                                                                    <option>rajstahan</option>
+                                                                    <option>delhi</option>
+                                                                
+                                                                  </select>
+                                                                  <div *ngIf="(get.city.dirty || get.city.touched) && get.city.errors" class="invalid-feedback">
+                                                                        <div *ngIf="get.city.errors.required">City is required</div>
+                                                                   </div>
+                                                                </div>  
+                                    </div>
+                                    
+
+                                    <div class="form row">
+                                            <div class="form-group col-md-8">
+                                                    <input type="text" class="form-control"  placeholder="Introduce YourSelf To description" formControlName="description" [ngClass]="{ 'is-invalid': (get.description.dirty || get.description.touched) && get.description.errors }">
+                                                    <div *ngIf="(get.description.dirty || get.description.touched) && get.description.errors" class="invalid-feedback">
+                                                        <div *ngIf="get.description.errors.required">Description is required</div>
+                                                   </div>
+                                                </div> 
+
+
+                   
+                                    </div>
+                                    <h4>Required For FeedBack</h4>
+                                    <div class="form row">
+                                        <div class="form-group col-md-6">
+                                            <label class="col-form-label">Age:</label>
+                                                <input type="number" class="form-control" formControlName="age" [ngClass]="{ 'is-invalid': (get.age.dirty || get.age.touched) && get.age.errors }">
+                                                <div *ngIf="(get.age.dirty || get.age.touched) && get.age.errors" class="invalid-feedback">
+                                                        <div *ngIf="get.age.errors.required">Age Required</div>
+                                                      <!-- <div *ngIf="get.age.errors.minlength">minlength must be at least 10</div> -->
+                                                   </div>
+                                        </div> 
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="col-form-label">Intrested:</label>
+
+                                            <div class="form-check" *ngFor="let control of checkboxArray.controls; let i=index;">
+                                              <input class="form-check-input" type="checkbox" id="check{{i}}" [formControl]="control">
+                                                <label class="form-group">{{fruits[i]}}</label>
+                                            </div>
+                                           
+                                            
+                                        </div>
+                                        <div class="form row">
+                                                <div class="form-group col-md-6">
+                                                        Education:
+                                                        <input type="text" class="form-control" placeholder="Education required" formControlName="er" [ngClass]="{ 'is-invalid': (get.er.dirty || get.er.touched) && get.er.errors }">
+                                                        <div *ngIf="(get.er.dirty || get.er.touched) && get.er.errors" class="invalid-feedback">
+                                                                <div *ngIf="get.er.errors.required">Education is required</div>
+                                                           </div>
+                                                        
+                                                </div> 
+                                                <div class="form-group col-md-6">
+                                                        Education:
+                                                            <input type="text" class="form-control" placeholder="Major/Indstry" formControlName="mi" [ngClass]="{ 'is-invalid': (get.mi.dirty || get.mi.touched) && get.mi.errors }" >
+                                                            <div *ngIf="(get.mi.dirty || get.mi.touched) && get.mi.errors" class="invalid-feedback">
+                                                                <div *ngIf="get.mi.errors.required">Major Industry is required</div>
+                                                           </div>
+                                                    </div>
+                                            </div>
+                                            <div class="form row">
+                                                    <div class="form-group col-md-6">
+                                                                Employment:
+                                                           <input type="text" class="form-control" placeholder="Profession" formControlName="prof" [ngClass]="{ 'is-invalid': (get.prof.dirty || get.prof.touched) && get.prof.errors }">
+                                                           <div *ngIf="(get.prof.dirty || get.prof.touched) && get.prof.errors" class="invalid-feedback">
+                                                                <div *ngIf="get.prof.errors.required">Porfessional Expirence is required</div>
+                                                           </div>
+                                                    </div> 
+                                                    <div class="form-group col-md-6">
+                                                                 Employment:
+                                                           <input type="text" class="form-control" placeholder="Year Of Experience" formControlName="yoe" [ngClass]="{ 'is-invalid': (get.yoe.dirty || get.yoe.touched) && get.yoe.errors }">
+                                                            <div *ngIf="(get.yoe.dirty || get.yoe.touched) && get.yoe.errors" class="invalid-feedback">
+                                                                <div *ngIf="get.yoe.errors.required">Expirence required</div>
+                                                           </div>
+
+                                                    </div> 
+
+                                                </div>
+
+                                   
+                             
+                                 <div class="form-group">
+                                        <button type="submit" [disabled]="!signupForm.valid">Signup</button>
+                                 </div>
+                            
+                
+        </form>
+</div>
