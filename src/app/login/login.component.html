@@ -1,22 +1,45 @@
-<p>login works!</p>
-<form>
-   
-  
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-  
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-  
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
+<div fxLayout="column" fxLayoutAlign="center center" class="backclr"> 
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> 
+        <h2>Login Form</h2>
+                                
+        <div class="form">
+                <label>Email</label>
+               <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text fa fa-envelope"></span>
+                  </div>
+                     <input type="text" class="form-control" placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid':(get.password.dirty || get.email.touched) && get.email.errors }">
+                      <div *ngIf="(get.email.dirty || get.email.touched) && get.email.errors" class="invalid-feedback">
+                        <div *ngIf="get.email.errors.required">Email is required</div>
+                     </div>
+                 </div>
+                
+
+                <label>Password</label>
+                <div class="input-group mb-2">
+                     <div class="input-group-prepend">
+                       <span class="input-group-text fa fa-lock"></span>
+                     </div>
+
+                     <input type="text" class="form-control" placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid':(get.password.dirty || get.password.touched) && get.password.errors }">
+                     <div *ngIf="(get.password.dirty || get.password.touched) && get.password.errors" class="invalid-feedback">
+                        <div *ngIf="get.password.errors.required">Password is required</div>
+                    </div>
+                 </div>
+                 
+
+                 <div class="form-group">
+                    <button type="submit" routerLink="/dashboard">Login</button>
+                </div>
+                <div class="form-group">
+                    <button class="btn">Fogot Password</button>
+               </div>
+
+        
+           </div>
+           
+           
+           
+    </form>
+
+</div>

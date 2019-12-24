@@ -1,0 +1,66 @@
+.sidebar
+{
+    background-color:gainsboro;
+    max-width: 20%;
+    min-width: 300px;
+    //max-height: calc(100vh - 100px);
+    height:calc(100vh - 290px);
+   // position: sticky;
+    //top: 100px;
+    z-index: 2;
+    padding-top: 14px;
+    border-right:2px solid darkblue;
+}
+.contain
+{
+    background-color:gainsboro;
+    width: 80%;
+    
+    
+   
+}
+.btn
+{
+    background-color:rgb(245, 204, 41);
+    color: #1a237e;
+    margin-right: 50px;
+    margin-left:25px;
+   // padding: 3px 50px;
+    border-radius: 50px;
+    width: 85%;
+}
+.btn:hover
+{
+    border:2px solid yellow;
+    background-color: yellow;
+}
+.vertical-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .vertical-menu ul li a{
+      text-decoration: none;
+   
+  }
+  .menu-item
+  {
+    color: #1a237e;
+    font-size:16px;
+    font-family:sans-serif;
+    font-weight: 600;
+
+  }
+.active {
+    background-color:#ffd32a;
+    color:rgb(48, 95, 196);
+
+  }
+  .icon
+  {
+    margin-right:12px;
+    padding:7px;
+    margin-bottom: 18px;
+    //width: 100%;
+    margin-top: 10px;
+  }

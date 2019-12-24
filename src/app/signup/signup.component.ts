@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, MinLengthValidator } from '@angular/forms';
+import { FormBuilder, MinLengthValidator, ControlContainer } from '@angular/forms';
 import{ FormControl,FormGroup,FormArray } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import {passValidator} from  './customValidation';
 import {passwordValidator} from  './customValidation';
-import { element } from 'protractor';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -20,7 +20,9 @@ export class SignupComponent implements OnInit {
   //   {name :"Migrate Family", id: 3},
   //   {name :"Tourist", id: 4}
   // ];
-fruits:Array<String>=['work','family','studying','xyz'];
+checkBox:Array<String>=['Work','Migrate family','Studying','Tourist'];
+//create instance var to hold finally selected box value
+slectedChechBoxValue = [];
 
 
   constructor(private fb: FormBuilder) { 
@@ -37,7 +39,7 @@ fruits:Array<String>=['work','family','studying','xyz'];
       city:['',Validators.required],
       description:['',Validators.required],
       age:['',Validators.required],
-      favFruits:this.addCheckboxcontrols(),
+      favCheck:this.addCheckboxcontrols(),
       er:['',Validators.required],
       prof:['',Validators.required],
       mi:['',Validators.required],
@@ -87,7 +89,7 @@ fruits:Array<String>=['work','family','studying','xyz'];
   //}
   addCheckboxcontrols()
   {
-const arr =this.fruits.map(element => {
+const arr =this.checkBox.map(element => {
   return this.fb.control(false);
 });
 return this.fb.array(arr);
@@ -96,6 +98,18 @@ return this.fb.array(arr);
 }
 get checkboxArray()
 {
-  return <FormArray>this.signupForm.get('favFruits');
+  return <FormArray>this.signupForm.get('favCheck');
+}
+getselectedCheckBoxValue()
+{
+  this.slectedChechBoxValue= [];
+  this.checkboxArray.controls.forEach((control,i) => {
+    if(control.value)
+    {
+      this.slectedChechBoxValue.push(this.checkBox[i]);
+    }
+
+  });
+//console.log(this.slectedChechBoxValue);
 }
 }

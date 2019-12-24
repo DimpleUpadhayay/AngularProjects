@@ -161,8 +161,9 @@
                                       <label class="col-form-label">Intrested:</label>
 
                                             <div class="form-check" *ngFor="let control of checkboxArray.controls; let i=index;">
-                                              <input class="form-check-input" type="checkbox" id="check{{i}}" [formControl]="control">
-                                                <label class="form-group">{{fruits[i]}}</label>
+                                              <input class="form-check-input" type="checkbox" id="check{{i}}" [formControl]="control"
+                                               (change)="getselectedCheckBoxValue()" >
+                                                <label class="form-group">{{checkBox[i]}}</label>
                                             </div>
                                            
                             

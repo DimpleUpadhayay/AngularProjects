@@ -7,6 +7,9 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+//import { SidebarComponent } from './sidebar/sidebar.component';
+import { PublicComponent } from './public/public.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -15,7 +18,10 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    //SidebarComponent,
+    PublicComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

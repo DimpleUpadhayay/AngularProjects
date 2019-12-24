@@ -1,0 +1,42 @@
+.backclr
+ {
+    background-color:gainsboro;
+    width: 100%;
+   
+}button
+{
+    background-color: yellow;
+    color: blue;
+    margin-right: 50px;
+    margin-left:25px;
+   // padding: 3px 50px;
+    border-radius: 50px;
+    border:2px solid yellow;
+    width: 85%;
+}
+button:hover
+{
+    background-color:#ead47c;
+}
+h2,h4{
+    margin-top: 30px;
+    margin-left: 45px;
+    color: blue;
+}
+.btn
+{
+    background-color:gainsboro;
+    border:0; 
+    border-radius:0px;
+
+
+}
+form{
+    background-color:gray;
+    margin: 10px 10px ;
+    padding: 10px 10px;
+    border :2px solid rgb(54, 53, 53);
+    box-shadow: 2px 2px 4px #686666;
+    
+
+}
