@@ -1,21 +1,68 @@
 
 
-<div fxLayout="row" fxLayoutAlign="center center" class="sidebar">
-    <div fxLayout="column" fxLayoutAlign="center center">
-        
-         <button class="btn" ><i class="fa fa-pencil"></i><strong>Ask A Question</strong></button>
+<div fxLayout="row" fxLayoutAlign="start start">
+    <div fxLayout="column" fxLayoutAlign="center center" class="sidebar">
+            
+                <button class="btn" routerLink="/login"><i class="fa fa-pencil"></i><strong>Ask A Question</strong></button>
+    
         <div class="vertical-menu">
                 <ul>    
-                        <li><a routerLink="/dashboard" class="menu-item"><i class="fa fa-home icon"></i>Home</a></li>
-                        <li><a class="menu-item"><i class="fa fa-user icon"></i>Public Forums</a></li>
-                        <li><a class="menu-item"><i class="fa fa-user icon"></i>Community</a></li>
+                        <li><a routerLink="/dashboard" class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-home icon"></i>Home</a></li>
+                        <li><a  routerLink="public" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-user icon"></i>Public Forums</a></li>
+                        <li><a class="menu-item"><i class="fa fa-user icon"></i>Community</a><i class="fa fa-angle-down" aria-hidden="true" (click)="isCollapsed = !isCollapsed"
+                            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"></i></li>
+                            <span id="collapseExample" [ngbCollapse]="isCollapsed">
+        
+                                    <span class="menu">Registerd User</span>
+                              </span>
+                          
+                            
+
                         
                       </ul>
                 
         </div>
         
+        
     </div>
     
+    <div fxLayout="column" fxLayoutAlign="start start" class="contain">
+        <div><router-outlet></router-outlet></div>
+        <h1>Top Question</h1>
+        <div>
+            <span class="active-cat">Votes</span>
+            <span class="normal">Hot</span>
+            <span class="normal">Answered</span>
+            <span class="normal">Unanswered</span>
+
+        </div>
+
+        <div class="question-card" fxLayout="row" fxLayoutAlign="start stretch">
+            <div class="details-column" fxLayout="column" fxLayoutAlign="start stretch">
+                <span class="details-card">
+                    <h2>1</h2>
+                    <p><strong>Votes</strong></p>
+                 </span>
+                    <div class="card-content" fxLayout="column" fxLayoutAlign="space-between stretch">
+                        <div fxLayout="column" fxLayoutAlign="start stretch"></div>
+                    </div>
+            </div>
+            <div fxLayout="column"fxLayoutAlign="center center"></div>
+
+         </div>
+        
     
-  
-</div>
+    
+   
+</div> 
+
+
+   
+
+    
+    
+
+    
+    
+   
+</div> 

@@ -10,6 +10,10 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 //import { SidebarComponent } from './sidebar/sidebar.component';
 import { PublicComponent } from './public/public.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChildhomeComponent } from './childhome/childhome.component';
+import { CommunityComponent } from './community/community.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+//import { NgbdCollapseBasic } from './collapse-basic';
 
 
 
@@ -21,15 +25,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     SignupComponent,
     //SidebarComponent,
     PublicComponent,
-    DashboardComponent
+    DashboardComponent,
+    ChildhomeComponent,
+    CommunityComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    FormsModule                                                                                                                                                                                                         
-
+    FormsModule, 
+    NgbModule                                                                                                                                                                                                  
   ],
   providers: [],
   bootstrap: [AppComponent]
