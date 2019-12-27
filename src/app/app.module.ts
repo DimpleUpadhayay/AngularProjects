@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChildhomeComponent } from './childhome/childhome.component';
 import { CommunityComponent } from './community/community.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { TopquestionsComponent } from './topquestions/topquestions.component';
 //import { NgbdCollapseBasic } from './collapse-basic';
 
 
@@ -28,6 +29,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     DashboardComponent,
     ChildhomeComponent,
     CommunityComponent,
+    TopquestionsComponent,
    
   ],
   imports: [

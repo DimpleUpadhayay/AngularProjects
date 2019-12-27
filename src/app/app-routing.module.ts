@@ -7,6 +7,7 @@ import { LoginComponent} from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChildhomeComponent } from './childhome/childhome.component';
 import { PublicComponent } from './public/public.component';
+import { TopquestionsComponent } from './topquestions/topquestions.component';
 
 
 const routes: Routes = [
@@ -16,13 +17,13 @@ const routes: Routes = [
 {path : 'login', component : LoginComponent },
 {path  : 'dashboard',component : DashboardComponent,
 children: [
-  {path  : 'dashboard',component : HomeComponent},
+  {path  : 'topquestions',component :TopquestionsComponent},
   {path  : 'public',component : PublicComponent},
-
+  {path:'' ,redirectTo:'topquestions',pathMatch:'full'},
 ]
 },
 
-{path:'' ,redirectTo:'/home',pathMatch:'full'},
+{path:'' ,redirectTo:'home',pathMatch:'full'},
 
 
 
