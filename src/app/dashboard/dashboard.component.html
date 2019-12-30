@@ -1,15 +1,15 @@
 
 
 <div fxLayout="row" fxLayoutAlign="start start">
-    <div fxFlex="20" fxLayout="column" fxLayoutAlign="center center" class="sidebar">
-            
+    <div fxFlex="20" fxLayout="column" fxLayoutAlign="center centre" class="sidebar">
+                
                 <button class="btn" routerLink="/login"><i class="fa fa-pencil"></i><strong>Ask A Question</strong></button>
-    
+
         <div class="vertical-menu">
                 <ul>    
                         <li><a routerLink="topquestions" class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-home icon"></i>Home</a></li>
                         <li><a  routerLink="public" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-user icon"></i>Public Forums</a></li>
-                        <li><a class="menu-item"><i class="fa fa-user icon"></i>Community</a><i class="fa fa-angle-down" aria-hidden="true" (click)="isCollapsed = !isCollapsed"
+                        <li><a class="menu-item"><i class="fa fa-user icon"></i>Community</a><i aria-hidden="true" (click)="isCollapsed = !isCollapsed"
                             [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"></i></li>
                             <span id="collapseExample" [ngbCollapse]="isCollapsed">
         
@@ -28,7 +28,21 @@
 
     
             <div fxFlex="80" class="contain" fxLayout="column" fxLayoutAlign="start stretch">
-                <router-outlet> </router-outlet></div>
+                        <div>
+                                        <h1>Top Question</h1>
+                                        <span class="active-cat">Votes</span>
+                                        <span class="normal">Hot</span>
+                                        <span class="normal">New</span>
+                                        <span class="normal">Answered</span>
+                                        <span class="normal">Unanswered</span>
+                                
+                       </div>
+                <router-outlet> 
+                          
+                </router-outlet> 
+                 
+
+            </div>
             
            
   

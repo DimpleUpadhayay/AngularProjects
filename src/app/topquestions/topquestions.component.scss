@@ -1,25 +1,10 @@
 
-.contain
-{
-  background-color:gainsboro;
-  //width: 80%; 
-  min-height: 100vh;
-  //max-width:80%;
-  //float:right;
-  //position: absolute;
-  //top: 100px;
-  //right:20px;
-  padding-top: 32px;
-  padding-left: 5vw;
-  padding-right: 5vw;
 
- 
-}
 .btn
 {
   padding: 6px 35px;
   border-radius: 50px;
-  background-color:#ffe93f;
+  background-color:#ffd32a;
   //border:2px solid #ffd32a;
  color:#1a237e;
  position: relative;
@@ -29,7 +14,7 @@
 .btn:hover
 {
     //border:2px solid yellow;
-    background-color: yellow;
+    background-color: #ffe93f;
 }
 .vertical-menu ul {
     list-style-type: none;
@@ -71,12 +56,7 @@
     // width: 100%;
     
  }
- h1{
-  font-size: 32px!important;
-  font-family: "Open Sans",sans-serif!important;
-  color: #1a237e;
-  margin-bottom:10px;
- }
+ 
  .menu{
   color: #1a237e;
   //font-size:16px;

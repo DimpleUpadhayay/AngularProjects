@@ -31,13 +31,15 @@
 }
 .btn
 {
-  padding: 6px 35px;
+
+ width: 237px;
   border-radius: 50px;
-  background-color:#ffe93f;
+  background-color: #ffd32a;
   //border:2px solid #ffd32a;
  color:#1a237e;
  position: relative;
- top:-150px;
+ top:-190px;
+ margin-left:20px;
   
 }
 .btn:hover
@@ -50,7 +52,7 @@
     margin: 0;
     padding: 0;
     position: relative;
-    top:-140px;
+    top:-180px;
   }
   .vertical-menu ul li a{
       text-decoration: none;
@@ -67,7 +69,7 @@
 .active {
     //background-color:#ffd32a;
     color:rgb(48, 95, 196);
-    border-left: 5px solid yellow;
+    border-left: 5px solid  #ffd32a;
     color: #1a237e;
     font-size:16px;
   }
@@ -86,10 +88,10 @@
     
  }
  h1{
-  font-size: 32px!important;
-  font-family: "Open Sans",sans-serif!important;
+  //font-size: 32px!important;
+  font-family:"Open Sans",sans-serif!important;
   color: #1a237e;
-  margin-bottom:10px;
+  margin-bottom:20px;
  }
  .menu{
   color: #1a237e;
@@ -163,6 +165,10 @@
   box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
   background-color: #ffd32a;
 
+
+}
+a:hover{
+  color: #1a237e;
 
 }
 
