@@ -1,8 +1,9 @@
 .backclr
  {
-    background-color:rgb(168, 199, 219);
+    background-color:gainsboro;
    // width: 100%;
    height:100%;
+  padding-bottom:10px;
    
 }
 .content-image
@@ -15,8 +16,14 @@
 .rapidera-img
 {
    background-image: url('../../assets/rapidera.jpg');
-   height: 400px;
-  //width:50%;
+   height:350px;
+ // max-width:95%;
+  padding-right:15px;
+  position: relative;
+  top:15%;
+   left:5%;
+  
+  
 }
 .img-text
 {
@@ -35,9 +42,7 @@
     font-weight: 700;
     font-family: Nunito,sans-serif;
     color: rgba(255,255,255,.87);
-   //   position: relative;
-   //  top:40px;
-   //  left:70px;
+  
    margin-left: 100px;
    padding-top: 50px;
 
@@ -53,4 +58,18 @@
    font-size: 18px;
    font-weight: 600;
    border-color: #ffd32a;
+}
+.aboutus{
+    padding-left:40px;
+    padding-right:20px;
+   font-size: 16px;
+   text-align: left;
+   color:black;
+}
+h1{
+
+   color: black;
+   margin-left: 5px;
+   border-bottom:2px solid#ffd32a;
+
 }

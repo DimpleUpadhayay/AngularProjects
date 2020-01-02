@@ -7,7 +7,7 @@
 
         <div class="vertical-menu">
                 <ul>    
-                        <li><a routerLink="topquestions" class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-home icon"></i>Home</a></li>
+                         <li><a  routerLink="topquestions" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-home icon"></i>Home</a></li>
                         <li><a  routerLink="public" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-user icon"></i>Public Forums</a></li>
                         <li><a class="menu-item"><i class="fa fa-user icon"></i>Community</a><i aria-hidden="true" (click)="isCollapsed = !isCollapsed"
                             [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"></i></li>
@@ -38,7 +38,7 @@
                                 
                        </div>
                 <router-outlet> 
-                          
+                              
                 </router-outlet> 
                  
 

@@ -22,7 +22,8 @@
 
 
         <div fxLayout="column" class="question-title" fxLayoutAlign="start stretch">
-            <a>{{card.heading}}</a>
+           <div (click)="goToQuestionDetails(card.id)">{{card.heading}}</div>
+    
             <p class="text-contain">{{card.heading2}}</p>
             <div fxLayout="row">
 

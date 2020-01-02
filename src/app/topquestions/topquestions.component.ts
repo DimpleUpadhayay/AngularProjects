@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-topquestions',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class TopquestionsComponent implements OnInit {
   //Craeting array of objects for question card//
   questionCard=[{ 
+    id:'1',
     votes : '1',
     heading : 'Edit 2- Migration Agent - Post to Public Forum',
     heading2 : 'Migration Agent - Post to Public Forum 2',
@@ -18,6 +20,7 @@ export class TopquestionsComponent implements OnInit {
     answere :'0',
     },
     {
+      id:'2',
       votes : '6',
     heading : 'Angular',
     heading2 : 'Migration Agent - Post to Public Forum 2',
@@ -28,6 +31,7 @@ export class TopquestionsComponent implements OnInit {
     answere :'8',
   },
   {
+    id:'3',
    votes : '3',
     heading : 'Testing purpose',
     heading2 : 'Migration Agent - Post to Public Forum 2',
@@ -39,9 +43,14 @@ export class TopquestionsComponent implements OnInit {
     },
   ]
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
+    
+  }
+
+  goToQuestionDetails(id) {
+    this.router.navigate(['/dashboard/questiondetails',id]);
   }
 
 }

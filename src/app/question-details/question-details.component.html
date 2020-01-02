@@ -1,0 +1,35 @@
+<div fxLayout="row" class="question-card">
+        <div class="question-title" fxLayout="column" fxFlex="128px" fxLayoutAlign="start center">
+           <div routerLink="/signup"><img src="assets/upvote-blank.png"></div>
+            <h4>1</h4>
+            <img src="assets/downvote-blank.png">
+    
+
+            </div>
+            <div fxLayout="column" class="question-title">
+            <h3>What is required for china group e-visa single ?</h3>
+            </div>
+        <div fxLayout="row">
+                <span class="text-contain2" *ngFor="let tag of card.tagdescription">{{tag}}</span> 
+        </div>
+        <div fxLayout="row">
+                <div>
+                        <img src="assets/user.jpeg" alt="not found" class="user">
+                    </div>
+                <div fxLayout="column">
+                        <div>
+                                <a class="user-text user-tpe-text "><strong>{{card.profile}}</strong>United States</a>
+                                <span class="user-type user-tpe-text">(Migration agent)</span>
+                            </div>
+                          
+                </div>
+                <div fxLayout="column">
+                        <div>
+                                <a class="user-text user-tpe-text "><strong>{{card.profile}}</strong>United States</a>
+                                <span class="user-type user-tpe-text">(Migration agent)</span>
+                            </div>
+                          
+                </div>
+
+        </div>
+</div>
