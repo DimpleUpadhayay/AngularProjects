@@ -1,6 +1,15 @@
 <!-- <p>topquestions works!</p> -->
+<div>
+    <h1>Top Question</h1>
+    <span class="active-cat">Votes</span>
+    <span class="normal">Hot</span>
+    <span class="normal">New</span>
+    <span class="normal">Answered</span>
+    <span class="normal">Unanswered</span>
 
-<div fxLayout="column" fxLayoutAlign="start stretch" *ngFor="let card of questionCard" >
+</div>
+
+<div fxLayout="column" fxLayoutAlign="start stretch" *ngFor="let card of questioncard">
 
 
     <div class="question-card" fxLayout="row" fxLayoutAlign="start">
@@ -28,11 +37,7 @@
             <div fxLayout="row">
 
                 <span class="text-contain2" *ngFor="let tag of card.tagdescription">{{tag}}</span>
-                <!-- <span class="text-contain2">{{card.tagdescription}}</span>
-                <span class="text-contain2">{{card.tagdescription}}</span>
-                <span class="text-contain2">{{card.tagdescription}}</span>
-                <span class="text-contain2">{{card.tagdescription}}</span> -->
-
+               
 
             </div>
 
@@ -49,4 +54,5 @@
                         <span class="user-tpe-text user-type">{{card.date}}</span>
                     </div>
                 </div>
+
             </div>

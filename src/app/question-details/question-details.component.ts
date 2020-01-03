@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { QuetioncardarrService } from '../quetioncardarr.service';
 
 @Component({
   selector: 'app-question-details',
@@ -7,9 +8,9 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./question-details.component.scss']
 })
 export class QuestionDetailsComponent implements OnInit {
-
+  public questioncard = [];
   selectedId:string;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private card: QuetioncardarrService) { }
 
   ngOnInit() {
     this.route.params.subscribe((param:Params)=> {
@@ -17,8 +18,9 @@ export class QuestionDetailsComponent implements OnInit {
 
       
     });
-
+    this.questioncard = this.card.getqestioncard();
     console.log(this.selectedId);
+   
     
   }
 

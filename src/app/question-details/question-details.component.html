@@ -1,31 +1,52 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+        <div fxLayout="row" fxFlex="40" fxLayoutAlign="start center">
+        <button class="back"><i class="fa fa-arrow-left"></i>Back</button>
+        </div>
+                <div fxLayout="row" fxFlex="60" fxLayoutAlign="end center" fxLayoutGap="16px" class="share"> 
+                                <!-- <p fxFlexAlign="centre centre">Share:</p> -->
+                                <i class="fa fa-facebook-square"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-envelope"></i>
+                
+                </div>
+</div>
+    
 <div fxLayout="row" class="question-card">
         <div class="question-title" fxLayout="column" fxFlex="128px" fxLayoutAlign="start center">
            <div routerLink="/signup"><img src="assets/upvote-blank.png"></div>
             <h4>1</h4>
-            <img src="assets/downvote-blank.png">
+           <div routerLink="/signup">
+            <img src="assets/downvote-blank.png"></div>
     
 
             </div>
-            <div fxLayout="column" class="question-title">
-            <h3>What is required for china group e-visa single ?</h3>
+            <div fxLayout="column" fxLayoutGap="50">
+                        <h4 class="question-title">{{questioncard[0].heading}}</h4>
+                        <p>Your order will be submitted for approval approximately 30 days from your intended travel date, per the issuing authority's requirement. </p>
             </div>
-        <div fxLayout="row">
-                <span class="text-contain2" *ngFor="let tag of card.tagdescription">{{tag}}</span> 
+            <div fxLayout="column">
+                <i class="fa fa-font-awesome flag"></i>
+            </div>
+         <div fxLayout="row" *ngFor="let tag of questioncard.tagdescription">
+                <span>
+                        
+                        <p>{{tag}}</p>
+                </span> 
         </div>
-        <div fxLayout="row">
+         <div fxLayout="row">
                 <div>
                         <img src="assets/user.jpeg" alt="not found" class="user">
                     </div>
                 <div fxLayout="column">
                         <div>
-                                <a class="user-text user-tpe-text "><strong>{{card.profile}}</strong>United States</a>
+                                <a class="user-text user-tpe-text "><strong></strong>United States</a>
                                 <span class="user-type user-tpe-text">(Migration agent)</span>
                             </div>
                           
                 </div>
                 <div fxLayout="column">
                         <div>
-                                <a class="user-text user-tpe-text "><strong>{{card.profile}}</strong>United States</a>
+                                <a class="user-text user-tpe-text "><strong></strong>United States</a>
                                 <span class="user-type user-tpe-text">(Migration agent)</span>
                             </div>
                           

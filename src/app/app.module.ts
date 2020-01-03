@@ -15,6 +15,7 @@ import { CommunityComponent } from './community/community.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { TopquestionsComponent } from './topquestions/topquestions.component';
 import { QuestionDetailsComponent } from './question-details/question-details.component';
+import { QuetioncardarrService } from './quetioncardarr.service';
 //import { NgbdCollapseBasic } from './collapse-basic';
 
 
@@ -42,7 +43,7 @@ import { QuestionDetailsComponent } from './question-details/question-details.co
     FormsModule, 
     NgbModule                                                                                                                                                                                                  
   ],
-  providers: [],
+  providers: [QuetioncardarrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
