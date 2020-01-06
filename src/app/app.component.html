@@ -1,13 +1,16 @@
 
-<div class="Mainwrapper" fxLayout="column" fxLayoutAlign="start stretch">
+<!-- <div class="Mainwrapper" fxLayout="column"  fxLayoutAlign="start stretch"> -->
         
 
-        <div class="top-navbar" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="top-navbar" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="row" fxFlexAlign.lt-md="start center">
 
-                <div class="logo"></div>
+                <div class="logo" fxFlex="15" fxLayout.lt-md="row-wrap" fxLayoutAlign.lt-md="start center" fxFlex.lt-md="20">
+                        <img src="../assets/logo.png">
+                </div>
 
+        
 
-                <div>
+                <div fxLayout.lt-md="row" fxLayoutAlign.lt-md="centre centre">
                         <button type="submit" class="nav-btn mx-2" routerLink="/login">Login</button>
                         <button type="submit" class="nav-btn signUp mx2" routerLink="/signup">Signup</button>
 
@@ -25,9 +28,9 @@
                 <!-- <img src="./assets/home.jpg" alt="home-content-image"> -->
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="centre centre" class="footer">
-                <div fxLayout="column" fxFlex="50" fxLayoutAlign="center centre">
-                        <div fxLayout="row" fxLayoutAlign="centre centre" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutAlign="centre centre" class="footer" fxLayout.lt-md="row">
+                <div fxLayout="column" fxFlex="50" fxLayoutAlign="center centre" fxLayout.lt-md="column">
+                        <div fxLayout="row" fxLayoutAlign="centre centre" fxLayoutGap="10px" fxLayout.lt-md="row">
                                         <a href="#">Question</a>
                                         <span fxLayoutAlign="end center">|</span>
                                         <a href="#">Advance Search</a>
@@ -35,15 +38,15 @@
                                         <a href="#">Privacy Policy</a>
         
                         </div>
-                        <div fxLayout="row" fxLayoutAlign="centre centre" >
+                        <div fxLayout="row" fxLayoutAlign="centre centre" fxLayout.lt-md="row">
                                         <span> © Copyright Shenovi.</span>
                         </div>
 
                 </div>
                 
-                <div class="column" fxLayoutAlign="end center" fxFlex="50">
+                <div class="column" fxLayoutAlign="end center" fxFlex="50" fxLayout.lt-md="column">
                        
-                                <div class="footer-icon" fxLayout="row" fxLayout="center center" fxLayoutGap="20px"> 
+                                <div class="footer-icon" fxLayout="row" fxLayout="center center" fxLayoutGap="20px" fxLayout.lt-md="row"  fxLayoutAlign.lt-md="centre centre"> 
                                                 <i class="fa fa-facebook-square" tooltop="Facebook"></i>
                                                 <i class="fa fa-linkedin-square"></i>
                                                 <i class="fa fa-twitter"></i>
@@ -58,4 +61,4 @@
 
         
 
-</div>
+<!-- </div> -->
