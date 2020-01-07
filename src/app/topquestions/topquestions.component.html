@@ -1,7 +1,8 @@
 <!-- <p>topquestions works!</p> -->
-<div>
-    <h1>Top Question</h1>
-    <span class="active-cat">Votes</span>
+<div fxLayout="row wrap" fxLayoutfxLayout="row wrap" fxLayoutAlignAlign="start center" fxLayoutGap="10px"><h1>Top Questions</h1></div>
+<div fxLayout.lt.md="row-wrap" fxLayout="row wrap" fxLayoutfxLayout="row wrap" fxLayoutAlignAlign="start center" fxLayoutGap="10px">
+
+    <span class="normal">Votes</span>
     <span class="normal">Hot</span>
     <span class="normal">New</span>
     <span class="normal">Answered</span>
@@ -9,46 +10,46 @@
 
 </div>
 
-<div fxLayout="column" fxLayoutAlign="start stretch" *ngFor="let card of questioncard">
+<div fxLayout="column" fxLayoutAlign="start stretch" *ngFor="let card of questioncard" fxLayout.lt-md="column" fxLayoutAlign.lt-md="start stretch">
 
 
-    <div class="question-card" fxLayout="row" fxLayoutAlign="start">
-        <div fxLayout="column" class="details-card" fxLayoutAlign="centre center">
+
+    <div class="question-card" fxLayout="row" fxLayoutAlign="start" fxLayout.lt-md="row" fxLayoutAlign.lt-md="start stretch">
+        <div fxLayout="column" class="details-card" fxLayoutAlign="centre center" fxLayout.lt-md="column">
             <span>
-                <h2 fxLayoutAlign="center center">{{card.votes}}</h2>
-                <strong fxLayoutAlign="center center"> Votes</strong>
+                <h2 fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center">{{card.votes}}</h2>
+                <strong fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center"> Votes</strong>
             </span>
 
-            <span class="has-best-answer">
-                <h2 fxLayoutAlign="center center">{{card.answere}}</h2>
+            <span class="has-best-answer"> 
+                <h2 fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center">{{card.answere}}</h2>
                 <strong>Answere</strong>
 
             </span>
-            <p class="views" fxLayoutAlign="center center">{{card.views}}Views</p>
+            <p class="views" fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center">{{card.views}}Views</p>
 
 
         </div>
 
 
-        <div fxLayout="column" class="question-title" fxLayoutAlign="start stretch">
+        <div fxLayout="column" class="question-title" fxLayoutAlign="start stretch" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center start">
            <div (click)="goToQuestionDetails(card.id)">{{card.heading}}</div>
     
             <p class="text-contain">{{card.heading2}}</p>
-            <div fxLayout="row">
+            <div fxLayout="row" fxLayout.lt-md="column">
 
                 <span class="text-contain2" *ngFor="let tag of card.tagdescription">{{tag}}</span>
                
 
             </div>
 
-            <div fxLayout="row" fxLayoutAlign="start end">
+            <div fxLayout="row" fxLayoutAlign="start end" fxLayout.lt-md="start end" fxLayoutAlign.lt-md="row">
                 <div>
                     <img src="assets/user.jpeg" alt="not found" class="user">
                 </div>
-                <div fxLayout="column" fxLayoutAlign="start stretch">
-                    <div>
+                <div fxLayout="column" fxLayoutAlign="start stretch" fxLayout.lt-md="column" fxLayoutAlgin.it.md="start center"></div>                    <div>
                         <a class="user-text user-tpe-text "><strong>{{card.profile}}</strong>United States</a>
-                        <span class="user-type user-tpe-text">(Migration agent)</span>
+                        <span class="user-type user-tpe-text" >(Migration agent)</span>
                     </div>
                     <div>
                         <span class="user-tpe-text user-type">{{card.date}}</span>

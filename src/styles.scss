@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/mobileview.scss";
+@import "~bootstrap/dist/css/bootstrap.css";
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -24,16 +26,6 @@ time, mark, audio, video{
 title{
 	color: white;
 }
-@import "~bootstrap/dist/css/bootstrap.css";
-// Media Query
-//Smartphones (portrait and landscape) ----------
-
-// @media screen and (min-width: 576px){
-	
-// 	.top-navbar
-// 	{
-// 		background-color: red;
-// 	}
 
 
-// }
+

@@ -1,0 +1,64 @@
+// Media Query
+// Smartphones (portrait and landscape) ----------
+
+@media screen and (max-width: 960px){
+	
+	// .top-navbar
+	// {
+	// 	background-color: red !important;
+    // }
+    .titile{
+        font-size: 33px!important;
+        color: red !important;
+    }
+    .img-text
+    {
+        font-size:20px;
+    }
+    .img-signup
+    {
+
+       width: 50px;
+       height: 48px;
+       font-size: 16px;
+       font-weight: 200;
+    }
+    .content-image
+    {
+        background-position: center !important;
+        height: 600px!important;
+    }
+    .nav-btn
+    {
+        padding: 7px 12px!important;
+        font-size: 12px!important;
+        margin-right: 5px!important;
+    }
+    .normal
+    {
+        border-radius: 20px!important;
+        font-weight: 200!important ;         
+        font-size: 10px !important ;
+        padding: 10 12px!important;
+        margin-right:5px!important;
+        //color:red !important;
+
+    }
+    .h1
+    {
+        font-size: 10px!important;
+    }
+    .text-contain2
+    {
+         
+          font-size: 12px!important;
+        //   padding: 5px 10px!important;
+        //   margin-right: 10px!important;
+        //   border-radius: 10px!important; 
+        
+        margin: 5px!important;
+    }
+    
+    
+
+}

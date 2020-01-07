@@ -11,7 +11,7 @@ export class QuetioncardarrService {
       votes : '1',
       heading : 'Edit 2- Migration Agent - Post to Public Forum?',
       heading2 : 'Migration Agent - Post to Public Forum 2',
-      tagdescription :['Tenancy','Home Stay','HECS-HELP'],
+      tagdescription :['Tenancy','Home Stay','HECS-HELP','HECS-HELP','HECS-HELP'],
       profile : 'Shinovi Migration',
       date : 'Asked 19 December 2019',
       views : "1",
