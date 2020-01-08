@@ -16,6 +16,10 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { TopquestionsComponent } from './topquestions/topquestions.component';
 import { QuestionDetailsComponent } from './question-details/question-details.component';
 import { QuetioncardarrService } from './quetioncardarr.service';
+//import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+
+
 //import { NgbdCollapseBasic } from './collapse-basic';
 
 
@@ -41,7 +45,7 @@ import { QuetioncardarrService } from './quetioncardarr.service';
     FlexLayoutModule,
     ReactiveFormsModule,
     FormsModule, 
-    NgbModule                                                                                                                                                                                                  
+    NgbModule,                                                                                                                                                                                           
   ],
   providers: [QuetioncardarrService],
   bootstrap: [AppComponent]

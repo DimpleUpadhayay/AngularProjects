@@ -91,6 +91,7 @@
     object-fit: cover;
     margin-right: 10px;
     margin-top:30px;
+    
 }
 .user-text
 {
@@ -154,5 +155,23 @@ color:rgb(245, 237, 237);
   box-shadow: 0px 0px 2px #888;
   background-color: #888;
   padding: .5em 0.6em;
-
+}
+.share-lable
+{
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+}
+.lock.fa.lock
+{
+  font-size: 30px;
+  color: #1a237e;
+  padding: 32px 0 0 ;
+margin-right:20px;
+cursor: pointer;
+margin-left:10px;
+}
+.date
+{
+  margin-left:50px;
 }

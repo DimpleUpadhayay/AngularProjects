@@ -14,7 +14,7 @@ export class TopquestionsComponent implements OnInit {
   constructor(private router: Router , private card: QuetioncardarrService) { }
 
   ngOnInit() {
- 
+//get all quetion details here 
     this.questioncard= this.card.getqestioncard();
   }
   goToQuestionDetails(id) {
