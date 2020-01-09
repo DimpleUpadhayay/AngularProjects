@@ -17,6 +17,7 @@ import { TopquestionsComponent } from './topquestions/topquestions.component';
 import { QuestionDetailsComponent } from './question-details/question-details.component';
 import { QuetioncardarrService } from './quetioncardarr.service';
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { QuillModule } from 'ngx-quill';
 
 
 
@@ -45,7 +46,9 @@ import { QuetioncardarrService } from './quetioncardarr.service';
     FlexLayoutModule,
     ReactiveFormsModule,
     FormsModule, 
-    NgbModule,                                                                                                                                                                                           
+    NgbModule,
+    QuillModule.forRoot()
+                                                                                                                                                                                      
   ],
   providers: [QuetioncardarrService],
   bootstrap: [AppComponent]

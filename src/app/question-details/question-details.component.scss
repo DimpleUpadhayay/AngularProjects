@@ -7,8 +7,14 @@
   background-color: #fff;
   min-height: 238px;
   width:100%;
-  margin-top: 20px;
+//margin-top: 20px;
+  margin-bottom: 50px;
 }
+.comment-card
+{
+ padding: 50px;
+}
+
 
 .details-card
 {
@@ -16,6 +22,7 @@
     cursor: pointer;
     width: 104px;
     padding: 11px;
+  
 }
 
 
@@ -82,7 +89,7 @@
     margin-right: 10px;
     border-radius: 10px;
 }
-.user
+.user-img
 {
   background-image:url('/assets/user.jpeg') ;
   border-radius: 50%;
@@ -90,7 +97,7 @@
     height: 40px;
     object-fit: cover;
     margin-right: 10px;
-    margin-top:30px;
+margin-top:30px;
     
 }
 .user-text
@@ -98,6 +105,7 @@
   color: #1a237e;
   font-size: 14px;
   text-decoration: none;
+  margin-right: 6px;
   
   
 }
@@ -137,6 +145,7 @@ cursor: pointer;
  color: #1a237e;
   border:1px solid rgba(0,0,0,.12);
   cursor: pointer;
+  margin-bottom: 20px;
 
  
 }
@@ -147,6 +156,7 @@ background-color:rgba(0,0,0,.08)!important;
 font-size: 15px;
 //color:rgb(143, 138, 138);
 color:rgb(245, 237, 237);
+margin-bottom: 20px;
 
 }
 .share i.fa {
@@ -175,3 +185,67 @@ margin-left:10px;
 {
   margin-left:50px;
 }
+.post-answer
+{
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  padding: 0 23px 0 20px;
+  border-radius: 8px;
+  background-color: #1a237e;
+  color: #fff;
+  margin-top: 10px;
+  border: 1px solid #1a237e;
+
+}
+.post-answer:hover
+{
+  background-color: #151c65!important;
+}
+.para-heading
+{
+  color: #5c6bc0;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: "Open Sans",sans-serif!important;
+    padding-top: 10px;
+    
+}
+.answer{
+  color: #1a237e!important;
+  font-size: 14px!important;
+  height: 40px!important;
+  font-weight: 600!important;
+  padding: 0 23px 0 20px!important;
+  border-radius: 8px!important;
+  background-color: white;
+  border:2px solid #1a237e;
+  margin: 10px 10px 10px 0;
+}
+.comment-btn{
+  border: 1px solid rgba(0,0,0,.07)!important;
+}
+.comment-btn:hover
+{
+  background-color:#e0e0e0!important;
+}
+.select-box
+{
+  color: #1a237e!important;
+  font-weight: 600!important;
+  font-size: 14px!important;
+  background-color:#e0e0e0;
+  border: 1px solid rgba(0,0,0,.07)!important
+
+}
+.active-pag
+{
+  color: #5c6bc0!important;
+  border-radius: 8px!important;
+margin-bottom: 50px;
+  //font-weight: 600;
+  //padding: 9px 11px;
+}
+
+
+
