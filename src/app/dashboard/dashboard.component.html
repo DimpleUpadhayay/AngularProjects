@@ -3,7 +3,7 @@
 <div fxLayout="row" fxLayoutAlign="start start">
     <div fxFlex="20" fxLayout="column" fxLayoutAlign="center centre" class="sidebar">
                 
-                <button class="btn" routerLink="/login"><i class="fa fa-pencil"></i><strong>Ask A Question</strong></button>
+                <button class="btn" routerLink="/login"><i class="fa fa-pencil fa-icon-mr"></i><strong>Ask A Question</strong></button>
 
         <div class="vertical-menu">
                 <ul>    
@@ -31,9 +31,31 @@
                 <router-outlet> 
                               
                 </router-outlet> 
+                
+                    <div fxLayout="row" fxLayoutAlign="end center" fxFlex.lt-md="row">
+                                    <nav aria-label="..." class="active-pag">
+                                                    <ul class="pagination">
+                                                      <li class="page-item disabled">
+                                                        <a class="page-link" tabindex="-1">Previous</a>
+                                                      </li>
+                                                      <li class="page-item"><a class="page-link" >1</a></li>
+                                                      <li class="page-item">
+                                                        <a class="page-link">2 <span class="sr-only">(current)</span></a>
+                                                      </li>
+                                                      <li class="page-item"><a class="page-link">3</a></li>
+                                                      <li class="page-item">
+                                                        <a class="page-link">Next</a>
+                                                      </li>
+                                                    </ul>
+                                                  </nav>
+            
+    
+            </div>
+    
                  
 
             </div>
+            
             
            
   

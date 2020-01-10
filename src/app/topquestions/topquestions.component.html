@@ -1,6 +1,9 @@
 <!-- <p>topquestions works!</p> -->
-<div fxLayout="row wrap" fxLayoutfxLayout="row wrap" fxLayoutAlignAlign="start center" fxLayoutGap="10px"><h1>Top Questions</h1></div>
-<div fxLayout.lt.md="row-wrap" fxLayout="row wrap" fxLayoutfxLayout="row wrap" fxLayoutAlignAlign="start center" fxLayoutGap="10px">
+<div fxLayout="row wrap" fxLayoutfxLayout="row wrap" fxLayoutAlignAlign="start center" fxLayoutGap="10px">
+    <h1>Top Questions</h1>
+</div>
+<div fxLayout.lt.md="row-wrap" fxLayout="row wrap" fxLayoutfxLayout="row wrap" fxLayoutAlignAlign="start center"
+    fxLayoutGap="10px">
 
     <span class="normal">Votes</span>
     <span class="normal">Hot</span>
@@ -9,19 +12,22 @@
     <span class="normal">Unanswered</span>
 
 </div>
+<!-- <p>topquestions works!</p> -->
 
-<div fxLayout="column" fxLayoutAlign="start stretch" *ngFor="let card of questioncard" fxLayout.lt-md="column" fxLayoutAlign.lt-md="start stretch">
+<div fxLayout="column" fxLayoutAlign="start stretch" *ngFor="let card of questioncard" fxLayout.lt-md="column"
+    fxLayoutAlign.lt-md="start stretch">
 
 
 
-    <div class="question-card" fxLayout="row" fxLayoutAlign="start" fxLayout.lt-md="row" fxLayoutAlign.lt-md="start stretch">
+    <div class="question-card" fxLayout="row" fxLayoutAlign="start" fxLayout.lt-md="row"
+        fxLayoutAlign.lt-md="start stretch">
         <div fxLayout="column" class="details-card" fxLayoutAlign="centre center" fxLayout.lt-md="column">
             <span>
                 <h2 fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center">{{card.votes}}</h2>
                 <strong fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center"> Votes</strong>
             </span>
 
-            <span class="has-best-answer"> 
+            <span class="has-best-answer">
                 <h2 fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center">{{card.answere}}</h2>
                 <strong>Answere</strong>
 
@@ -32,29 +38,36 @@
         </div>
 
 
-        <div fxLayout="column" class="question-title" fxLayoutAlign="start stretch" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center start">
-           <div (click)="goToQuestionDetails(card.id)">{{card.heading}}</div>
-    
+        <div fxLayout="column" class="question-title" fxLayoutAlign="start stretch" fxLayout.lt-md="column"
+            fxLayoutAlign.lt-md="center start">
+            <div (click)="goToQuestionDetails(card.id)">{{card.heading}}</div>
+
             <p class="text-contain">{{card.heading2}}</p>
             <div fxLayout="row" fxLayout.lt-md="column">
-
                 <span class="text-contain2" *ngFor="let tag of card.tagdescription">{{tag}}</span>
-               
-
             </div>
 
-            <div fxLayout="row" fxLayoutAlign="start end" fxLayout.lt-md="start end" fxLayoutAlign.lt-md="row">
-                    <div fxLayoutAlign="center center">
-                        <img src="assets/user.jpeg" alt="not found" class="user">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="start center" fxLayoutAlign.lt-md="row">
+                <div fxFlex="10">
+                    <img class="user" src="assets/user.jpeg" alt="not found">
+                </div>
+                <div fxFlex="90" fxLayout="column" fxLayoutAlign="start start" fxLayout.lt-md="column"
+                    fxLayoutAlgin.it-md="start start">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="row"
+                        fxLayoutAlgin.it-md="start center">
+                        <span class="user-text"><strong>{{card.profile}}</strong></span>
+                        <span class="user-text">United States</span>
+                        <span class="user-italic">(Migration agent)</span>
                     </div>
-                    <div fxLayout="row" fxLayoutAlign="start stretch" fxLayout.lt-md="column" fxLayoutAlgin.it.md="start center"></div>                    <div>
-                            <a class="user-text user-tpe-text "><strong class="user-text">{{card.profile}}</strong>United States</a>
-                            <span class="user-type user-tpe-text" >(Migration agent)</span>
-                        </div>
-                       
+                    <div>
+                        <span class="user-date">{{card.date}}</span>
                     </div>
-                         <div class="date">
-                            <span class="user-tpe-text user-type">{{card.date}}</span>
-                        </div>
-    
+                </div>
             </div>
+        </div>
+
+    </div>
+</div>
+
+
+
