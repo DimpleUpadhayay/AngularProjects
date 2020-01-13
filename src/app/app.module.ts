@@ -18,10 +18,7 @@ import { QuestionDetailsComponent } from './question-details/question-details.co
 import { QuetioncardarrService } from './quetioncardarr.service';
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { QuillModule } from 'ngx-quill';
-
-
-
-//import { NgbdCollapseBasic } from './collapse-basic';
+import { PublicDetailsComponent } from './public-details/public-details.component';
 
 
 
@@ -38,15 +35,18 @@ import { QuillModule } from 'ngx-quill';
     CommunityComponent,
     TopquestionsComponent,
     QuestionDetailsComponent,
+    PublicDetailsComponent,
    
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    FormsModule, 
+    FormsModule,
     NgbModule,
+ 
     QuillModule.forRoot()
                                                                                                                                                                                       
   ],

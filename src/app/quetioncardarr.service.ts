@@ -56,7 +56,7 @@ questions = [{
   getqestioncard(){
   return this.questions;
   }
-
+// get quetion details by id using fillter
   getQuestionById(qid) {
     let question = this.questions.filter((singleQuestion) => {
       if(singleQuestion.id == qid) {

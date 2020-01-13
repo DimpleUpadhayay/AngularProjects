@@ -29,28 +29,28 @@
                 <p class="text-contain">{{questioncard[0].heading2}}</p>
 
                 <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="column" fxFlexAlign.lt-md="start center">
-                        <span *ngFor="let tag of questioncard[0].tagdescription" class="text-contain2">{{tag}}</span>
+                        <span *ngFor="let tag of questioncard[0].tagdescription" class="text-contain2 user-info
+                        ">{{tag}}</span>
                 
 
                 </div>
-                <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="start center" fxLayoutAlign.lt-md="row">
-                                <div fxFlex="10" >
-                                    <img class="user" src="assets/user.jpeg" alt="not found">
+                <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="start center" fxLayoutAlign.lt-md="row" class="user-info">
+                        
+                                <img class="user" src="assets/user.jpeg" alt="not found">
+            
+                            <div fxFlex="90" fxLayout="column" fxLayoutAlign="start start" fxLayout.lt-md="column" fxLayoutAlgin.it-md="start start">
+                                <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="row"
+                                fxLayoutAlgin.it-md="start center">
+                                    <span class="user-text"><strong>{{questioncard[0].profile}}</strong></span>
+                                    <span class="user-text">United States</span>
+                                    <span class="user-italic">(Migration agent)</span>
                                 </div>
-                                <div fxFlex="90" fxLayout="column" fxLayoutAlign="start start" fxLayout.lt-md="column"
-                                    fxLayoutAlgin.it-md="start start">
-                                    <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="row"
-                                    fxLayoutAlgin.it-md="start center">
-                                        <span class="user-text"><strong>{{questioncard[0].profile}}</strong></span>
-                                        <span class="user-text">United States</span>
-                                        <span class="user-italic">(Migration agent)</span>
-                                    </div>
-                                    <div>
-                                        <span class="user-date">{{questioncard[0].date}}</span>
-                                    </div>
+                                <div fxLayout="row">
+                                    <span class="user-date">{{questioncard[0].date}}</span>
                                 </div>
                             </div>
-                
+                        </div>      
+                              
                 
                 <div fxLayout="column" fxLayout.lt-md="column">
                                 <div fxLayout="row"  fxLayoutAlign="start center" fxLayout.lt-md="row" fxLayoutAlign.lt-md="start center">
@@ -104,20 +104,20 @@
                 </div>
                         
                 <div fxLayout="column" fxFlex="70">
-                       
-            <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="start center" fxLayoutAlign.lt-md="row">
-                        <div fxFlex="10" >
+                        <div fxLayout="row wrap"><i class="fa fa-check-circle" style="font-size: 20px; color:#3ab785; margin-right: 10px;"></i><h4 class="best-answer">Best Answer</h4></div>
+                
+                   <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="start center" fxLayoutAlign.lt-md="row">
+                        
                             <img class="user" src="assets/user.jpeg" alt="not found">
-                        </div>
-                        <div fxFlex="90" fxLayout="column" fxLayoutAlign="start start" fxLayout.lt-md="column"
-                            fxLayoutAlgin.it-md="start start">
+        
+                        <div fxFlex="90" fxLayout="column" fxLayoutAlign="start start" fxLayout.lt-md="column" fxLayoutAlgin.it-md="start start">
                             <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="row"
                             fxLayoutAlgin.it-md="start center">
                                 <span class="user-text"><strong>{{questioncard[0].profile}}</strong></span>
                                 <span class="user-text">United States</span>
                                 <span class="user-italic">(Migration agent)</span>
                             </div>
-                            <div>
+                            <div fxLayout="row">
                                 <span class="user-date">{{questioncard[0].date}}</span>
                             </div>
                         </div>
@@ -127,9 +127,22 @@
                         <div>
                                
                                 <p class="text-contain">All travelers in the group must enter and depart China on the same flight, at the same time, using the same port of entry and exit, and must use the same travel itinerary while in China.</p>
-                                <div>
-                                        <span class="text-contain">Desclaimer</span>
+                                <div class="comment-card">
+                                        <span class="user-text"><strong>{{questioncard[0].profile}}</strong></span>
+                                        <span class="text-contain">Commented</span>            
+                                        <span class="user-date text-contain"> 20 August 2020</span>
+                                        <div fxLayout="row">
+                                                        <p class="text-contain">You must apply no later than 20 days from your intended travel date.</p>   
+                                         </div>
+                                               
+                                        <div fxLayout="row">     
+                                            <a class="text-contain" href="">Desclaimer</a>
+                                            
+                                         </div>  
+                                           
                                 </div>
+                               
+                                
                         </div>
 
                         <div fxLayout="column" fxLayout.lt-md="column">
@@ -155,7 +168,7 @@
         
         </div>
         <!-- Paginationcode -->
-        <div fxLayout="row" fxLayout.lt-md="row" >
+        <!-- <div fxLayout="row" fxLayout.lt-md="row" >
                 <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="row" fxLayoutAlign.lt-md="start center">
                                 <nav aria-label="..." class="active-pag">
                                                 <ul class="pagination">
@@ -174,7 +187,7 @@
                                               </nav>
                 </div>
 
-        </div>
+        </div> -->
 <!-- quill code -->
 <div fxLayout="row" fxLayoutAlign="start stretch">
         <p class="para-heading">Your Answer</p>

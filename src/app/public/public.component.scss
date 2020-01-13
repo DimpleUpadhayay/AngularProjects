@@ -1,5 +1,22 @@
 
+.normal
+{
+ border-radius: 20px;
+ background-color: rgba(0,0,0,.08);
+ color: rgba(0,0,0,.6);
+ font-weight: 600;
+ font-size: 14px;
+ padding: 10px 20px;
+ font-family: "Open Sans",sans-serif;
+ margin-right:10px;
 
+}
+h1{
+ //font-size: 32px!important;
+ font-family:"Open Sans",sans-serif!important;
+ color: #1a237e;
+ margin-bottom:20px;
+}
 .btn
 {
   padding: 6px 35px;
@@ -178,7 +195,7 @@
     width: 40px;
     height: 40px;
     object-fit: cover;
-   // margin-right: 10px;
+   margin-right: 10px;
    // margin-top:30px;
 }
 .user-text
@@ -206,4 +223,8 @@
 {
   margin-top:25px;
   
+}
+.user-info
+{
+  margin-top: 30px;
 }

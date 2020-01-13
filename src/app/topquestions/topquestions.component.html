@@ -47,24 +47,23 @@
                 <span class="text-contain2" *ngFor="let tag of card.tagdescription">{{tag}}</span>
             </div>
 
-            <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="start center" fxLayoutAlign.lt-md="row">
-                <div fxFlex="10">
-                    <img class="user" src="assets/user.jpeg" alt="not found">
+            <div fxLayout="row" class="user-info">
+                <div fxLayout="column">
+                    <div fxLayout="row">
+                            <img class="user" src="assets/user.jpeg" alt="not found">
+                    </div>
                 </div>
-                <div fxFlex="90" fxLayout="column" fxLayoutAlign="start start" fxLayout.lt-md="column"
-                    fxLayoutAlgin.it-md="start start">
-                    <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-md="row"
-                        fxLayoutAlgin.it-md="start center">
-                        <span class="user-text"><strong>{{card.profile}}</strong></span>
-                        <span class="user-text">United States</span>
-                        <span class="user-italic">(Migration agent)</span>
+                <div fxLayout="column" fxLayoutAlign="center">
+                    <div fxLayout="row">
+                            <span class="user-text"><strong>{{card.profile}}</strong></span>
+                            <span class="user-text">United States</span>
+                            <span class="user-italic">(Migration agent)</span>
                     </div>
-                    <div>
-                        <span class="user-date">{{card.date}}</span>
-                    </div>
+                        <div fxLayout="row">
+                            <span class="user-date">{{card.date}}</span>
+                        </div>
                 </div>
             </div>
-        </div>
 
     </div>
 </div>

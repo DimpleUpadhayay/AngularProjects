@@ -9,17 +9,33 @@
                 <ul>    
                          <li><a  routerLink="topquestions" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-home icon"></i>Home</a></li>
                         <li><a  routerLink="public" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-user icon"></i>Public Forums</a></li>
-                        <li><a class="menu-item"><i class="fa fa-user icon"></i>Community</a><i aria-hidden="true" (click)="isCollapsed = !isCollapsed"
-                            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"></i></li>
-                            <span id="collapseExample" [ngbCollapse]="isCollapsed">
-        
-                                    <span class="menu">Registerd User</span>
-                              </span>
-                          
+                        <div fxLayout="row" class="menu-item">
+                            <i class="fa fa-user icon"></i>
+                           <span (click)="isCollapsed = !isCollapsed" data-toggle="isCollapsed"[attr.aria-expanded]="isCollapsed" aria-controls="collapseExample" >
                             
+                            <i class="fa " style="font-size: 22px;" [ngClass]="{'fa-angle-up': isCollapsed, 'fa-angle-down': !isCollapsed}">
+                            <span class="menu-item">Community</span></i>
+                          </span>
+                        </div>
+                          
+                          <div [ngbCollapse]="!isCollapsed">
+                            
+                                <span fxLayoutAlign="center end" class="menu-title ">Registerd User</span>
+                          
+                          </div>
+                        
+                           <!-- <div>
+                                                 
+                                  <a (click)="collapse=!collapse" data-toggle="collapse">
+                                      <i class="fa" [ngClass]="{'fa-angle-up': collapse, 'fa-angle-down': !collapse}">hhgh</i>    
+                                    
+                                  </a>
+                       </div> -->
 
                         
                       </ul>
+                      
+                      
                 
         </div>
         
