@@ -5,11 +5,12 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 ///import { SidebarComponent} from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ChildhomeComponent } from './childhome/childhome.component';
 import { PublicComponent } from './public/public.component';
 import { TopquestionsComponent } from './topquestions/topquestions.component';
 import { QuestionDetailsComponent } from './question-details/question-details.component';
 import { PublicDetailsComponent } from './public-details/public-details.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import { UserDetailsListComponent } from './user-details-list/user-details-list.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,8 @@ const routes: Routes = [
       { path: 'questiondetails/:id', component: QuestionDetailsComponent },
       { path: 'public', component: PublicComponent },
       { path: 'publicdetails/:id', component: PublicDetailsComponent },
+      { path: 'userlist' ,component:UserlistComponent },
+      { path: 'userdetailslist/:id', component: UserDetailsListComponent },
       { path: '', redirectTo: 'topquestions', pathMatch: 'full' },
     ]
   },

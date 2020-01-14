@@ -7,21 +7,21 @@
 
         <div class="vertical-menu">
                 <ul>    
-                         <li><a  routerLink="topquestions" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-home icon"></i>Home</a></li>
+                        <li><a  routerLink="topquestions" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-home icon"></i>Home</a></li>
                         <li><a  routerLink="public" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-user icon"></i>Public Forums</a></li>
+                       
                         <div fxLayout="row" class="menu-item">
-                            <i class="fa fa-user icon"></i>
-                           <span (click)="isCollapsed = !isCollapsed" data-toggle="isCollapsed"[attr.aria-expanded]="isCollapsed" aria-controls="collapseExample" >
-                            
-                            <i class="fa " style="font-size: 22px;" [ngClass]="{'fa-angle-up': isCollapsed, 'fa-angle-down': !isCollapsed}">
-                            <span class="menu-item">Community</span></i>
-                          </span>
+                           
+                            <span class="menu-item"><i class="fa fa-user icon"></i>Community</span>
+                            <div fxLayout="column" fxLayoutAlign="center">   
+                              <span (click)="isCollapsed = !isCollapsed" data-toggle="isCollapsed"[attr.aria-expanded]="isCollapsed" aria-controls="collapseExample">  
+                                <i class="fa " style="font-size: 23px;" [ngClass]="{'fa-angle-up': isCollapsed, 'fa-angle-down': !isCollapsed}"></i>
+                            </span>
+                           </div>
                         </div>
                           
                           <div [ngbCollapse]="!isCollapsed">
-                            
-                                <span fxLayoutAlign="center end" class="menu-title ">Registerd User</span>
-                          
+                                <span fxLayoutAlign="center center" class="menu-title"  routerLink="userlist" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-user icon"></i>Registerd User</span>
                           </div>
                         
                            <!-- <div>
@@ -33,7 +33,7 @@
                        </div> -->
 
                         
-                      </ul>
+                   </ul>
                       
                       
                 

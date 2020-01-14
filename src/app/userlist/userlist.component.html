@@ -1,0 +1,48 @@
+<div fxLayout="row wrap"  fxLayoutAlign="start center" fxLayoutGap="10px">
+        <h1>Registerd Community</h1>
+ </div>
+ <div fxLayout="row" fxLayoutAlign="end center" class="search-container">
+               
+            <i class="fa fa-search search-bar-icon"></i>
+             <input type="text" placeholder="Search by name" class="search-bar">
+         
+        
+ </div>
+ <div fxLayout="row"fxLayoutAlign="start stretch" *ngFor="let card of questioncard">
+ 
+     <div class="user-list-card" fxFlex="50" >
+         <div fxLayout="row" fxLayoutAlign="end center"><span class="userid">ID:{{card.userid}}</span></div>
+         <div fxLayout="row"> 
+            
+             <div fxLayout="column" fxLayoutAlign="center center">
+                    <img class="user" src="assets/user.jpeg" alt="not found">
+             </div>
+             <div fxLayout="column">
+                 <span class="username" (click)=goToUserDetailsList(card.id)>{{card.profile}}</span>
+                 <div fxLayout="row wrap">
+                 <i class="fa fa-map-marker user-list-icon"></i><span class="user-country">{{card.country}}</span>
+                </div>
+             </div>
+             
+            
+         </div>
+     </div>
+     <div class="user-list-card" fxFlex="50">
+            <div fxLayout="row" fxLayoutAlign="end center"><span class="userid">ID:{{card.userid}} </span></div>
+            <div fxLayout="row"> 
+               
+                <div fxLayout="column" fxLayoutAlign="center center">
+                       <img class="user" src="assets/user.jpeg" alt="not found">
+                </div>
+                <div fxLayout="column">
+                    <span class="username">{{card.profile}}</span>
+                    <div fxLayout="row wrap">
+                    <i class="fa fa-map-marker user-list-icon"></i><span class="user-country">{{card.country}}</span>
+                   </div>
+                </div>
+                
+               
+            </div>
+     </div>
+     
+ </div>

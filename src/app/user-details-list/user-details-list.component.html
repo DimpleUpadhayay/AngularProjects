@@ -1,0 +1,28 @@
+
+ <div fxLayout="row"fxLayoutAlign="start stretch" *ngFor="let card of questioncard">
+ 
+    <div class="user-list-card">
+        <div fxLayout="row" fxLayoutAlign="end center"><span class="userid">ID:{{card.userid}}</span></div>
+        <div fxLayout="row"> 
+           
+            <div fxLayout="column" fxLayoutAlign="center center">
+                   <img class="user" src="assets/user.jpeg" alt="not found">
+            </div>
+            <div fxLayout="column">
+                <span class="username" (click)=goToUserDetailsList(card.id)>{{card.profile}}</span>
+                <div fxLayout="row wrap">
+                <i class="fa fa-map-marker user-list-icon"></i><span class="user-country">{{card.country}}</span>
+               </div>
+            </div>
+            
+           
+        </div>
+    </div>
+    
+</div>
+<div fxLayout="row">
+    <div fxLayout="row"></div>
+    <div fxLayout="row"></div>
+
+</div>
+

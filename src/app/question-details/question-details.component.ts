@@ -14,7 +14,7 @@ export class QuestionDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private card: QuetioncardarrService, private router: Router) { }
 
   ngOnInit() {
-    // router parameter get id on anotherpage
+    // router parameter get selected id data on anotherpage
     this.route.params.subscribe((param:Params)=> {
       this.selectedId = param['id'];
 

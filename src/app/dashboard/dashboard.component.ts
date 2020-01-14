@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
    isCollapsed = false;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
+
+  // goTouserlist()
+  // {
+  //   this.router.navigate(['/dashboard/userlist']);
+  // }
 
 }

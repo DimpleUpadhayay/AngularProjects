@@ -10,8 +10,6 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 //import { SidebarComponent } from './sidebar/sidebar.component';
 import { PublicComponent } from './public/public.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ChildhomeComponent } from './childhome/childhome.component';
-import { CommunityComponent } from './community/community.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { TopquestionsComponent } from './topquestions/topquestions.component';
 import { QuestionDetailsComponent } from './question-details/question-details.component';
@@ -19,6 +17,8 @@ import { QuetioncardarrService } from './quetioncardarr.service';
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { QuillModule } from 'ngx-quill';
 import { PublicDetailsComponent } from './public-details/public-details.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import { UserDetailsListComponent } from './user-details-list/user-details-list.component';
 
 
 
@@ -31,11 +31,11 @@ import { PublicDetailsComponent } from './public-details/public-details.componen
     //SidebarComponent,
     PublicComponent,
     DashboardComponent,
-    ChildhomeComponent,
-    CommunityComponent,
     TopquestionsComponent,
     QuestionDetailsComponent,
     PublicDetailsComponent,
+    UserlistComponent,
+    UserDetailsListComponent,
    
   ],
   imports: [
