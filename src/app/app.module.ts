@@ -19,6 +19,7 @@ import { QuillModule } from 'ngx-quill';
 import { PublicDetailsComponent } from './public-details/public-details.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { UserDetailsListComponent } from './user-details-list/user-details-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -46,6 +47,7 @@ import { UserDetailsListComponent } from './user-details-list/user-details-list.
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
+    HttpClientModule,
  
     QuillModule.forRoot()
                                                                                                                                                                                       

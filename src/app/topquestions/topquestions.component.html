@@ -14,7 +14,7 @@
 </div>
 <!-- <p>topquestions works!</p> -->
 
-<div fxLayout="column" fxLayoutAlign="start stretch" *ngFor="let card of questioncard" fxLayout.lt-md="column"
+<div fxLayout="column" fxLayoutAlign="start stretch" *ngFor="let card of questions" fxLayout.lt-md="column"
     fxLayoutAlign.lt-md="start stretch">
 
 
@@ -23,12 +23,12 @@
         fxLayoutAlign.lt-md="start stretch">
         <div fxLayout="column" class="details-card" fxLayoutAlign="centre center" fxLayout.lt-md="column">
             <span>
-                <h2 fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center">{{card.votes}}</h2>
+                <h2 fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center">{{card.originalVotes}}</h2>
                 <strong fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center"> Votes</strong>
             </span>
 
             <span class="has-best-answer">
-                <h2 fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center">{{card.answere}}</h2>
+                <h2 fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center">{{card.answers.length}}</h2>
                 <strong>Answere</strong>
 
             </span>
@@ -40,27 +40,27 @@
 
         <div fxLayout="column" class="question-title" fxLayoutAlign="start stretch" fxLayout.lt-md="column"
             fxLayoutAlign.lt-md="center start">
-            <div (click)="goToQuestionDetails(card.id)">{{card.heading}}</div>
+            <div (click)="goToQuestionDetails(card.id)">{{card.questionTitle}}</div>
 
-            <p class="text-contain">{{card.heading2}}</p>
+            <p class="text-contain" [innerHTML]='card.questionText'></p>
             <div fxLayout="row" fxLayout.lt-md="column">
-                <span class="text-contain2" *ngFor="let tag of card.tagdescription">{{tag}}</span>
+                <span class="text-contain2" *ngFor="let tag of card.tags">{{tag.name}}</span>
             </div>
 
             <div fxLayout="row" class="user-info">
                 <div fxLayout="column">
                     <div fxLayout="row">
-                            <img class="user" src="assets/user.jpeg" alt="not found">
+                            <img class="user" [src]="card.user.profileUrl" alt="not found">
                     </div>
                 </div>
                 <div fxLayout="column" fxLayoutAlign="center">
                     <div fxLayout="row">
-                            <span class="user-text"><strong>{{card.profile}}</strong></span>
-                            <span class="user-text">{{card.country}}</span>
-                            <span class="user-italic">(Migration agent)</span>
+                            <span class="user-text"><strong>{{card.user.firstName}}</strong></span>
+                            <span class="user-text">{{card.user.country}}</span>
+                            <span class="user-italic">({{card.user.type}})</span>
                     </div>
                         <div fxLayout="row">
-                            <span class="user-date">{{card.date}}</span>
+                            <span class="user-date">{{card.createdAt|date:'d MMM yyyy'}}</span>
                         </div>
                 </div>
             </div>

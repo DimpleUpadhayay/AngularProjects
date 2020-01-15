@@ -37,6 +37,34 @@ title{
 {
 	margin-right: 10px;
 }
+input {
+	outline: 0;
+ }
+ 
+ .btn:focus {
+	outline: 0;
+ }
+ a:focus {
+	outline: 0;
+ }
 
-
-
+ span:focus{
+	 outline: 0;
+ }
+ .nav-btn:focus
+ {
+	 outline: 0;
+ }
+ button:focus
+ {
+	 outline: 0;
+ }
+ .btn-login:focus
+ {
+	 outline: 0;
+ }
+ .img-signup:focus{
+	 outline: 0;
+ }
+ 
+ 

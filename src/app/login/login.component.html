@@ -29,7 +29,7 @@
                  
 
                  <div class="form-group">
-                    <button type="submit" routerLink="/dashboard">Login</button>
+                    <button type="submit" routerLink="/dashboard" class="btn-login" [disabled]="!loginForm.valid">Login</button>
                 </div>
                 <div class="form-group">
                     <button class="btn">Fogot Password</button>

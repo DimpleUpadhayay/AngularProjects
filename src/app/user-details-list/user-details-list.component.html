@@ -3,16 +3,32 @@
  
     <div class="user-list-card">
         <div fxLayout="row" fxLayoutAlign="end center"><span class="userid">ID:{{card.userid}}</span></div>
-        <div fxLayout="row"> 
+        <div fxLayout="row" class="user-content-card"> 
            
-            <div fxLayout="column" fxLayoutAlign="center center">
+            <div fxLayout="column" fxLayoutAlign="center center" >
                    <img class="user" src="assets/user.jpeg" alt="not found">
             </div>
-            <div fxLayout="column">
+            <div fxLayout="column" fxFlex="50">
                 <span class="username" (click)=goToUserDetailsList(card.id)>{{card.profile}}</span>
+                <span class="user-text">member since 2020</span>
+                <span class="user-text">Active 10 hours ago</span>
                 <div fxLayout="row wrap">
                 <i class="fa fa-map-marker user-list-icon"></i><span class="user-country">{{card.country}}</span>
                </div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start end" fxFlex="35">
+                <div fxLayout="column" fxLayoutAlign="center center">
+                    <div fxLayout="row"><span class="info-card-vote">{{card.votes}}</span></div>
+                    <div fxLayout="row"><span class="info-card-vote">Question<br>Answerd</span></div>
+
+                </div>
+                <div class="divider"></div>
+                <div fxLayout="column" fxLayoutAlign="center center">
+                        <div fxLayout="row" ><span class="info-card-vote">{{card.votes}}</span></div>
+                        <div fxLayout="row" ><span class="info-card-vote">Question<br>Asked</span></div>
+    
+                    </div>
+
             </div>
             
            
@@ -20,9 +36,36 @@
     </div>
     
 </div>
-<div fxLayout="row">
-    <div fxLayout="row"></div>
-    <div fxLayout="row"></div>
+<div fxLayout="row" style="margin-bottom:16px;">
+    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="70">
+            <span class="active-cat">All</span>
+            <span class="normal">Answered</span>
+            <span class="normal">Question</span>
+        
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center end" fxFlex="30">
+            <span class="share-lable" style="margin-bottom:25px; margin-right:5px;">Sortby:</span>
+            <select class="form-control form-group col-sm-6 select-box">
+                            <option>Newest</option>
+                            <option>Votes</option>
+           </select>
+    </div>
+
+</div>
+<div class="question-list-card" *ngFor="let card of questioncard">
+    <div fxLayout="row" fxLayoutAlign="end center">
+        <span class="user-text">{{card.date}}</span>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start center" class="inner-card">
+        <div class="vote" fxLayout="column" fxFlex="38px" fxLayoutAlign="center center">
+            <span>{{card.votes}}</span>
+                <span>Vote</span>
+            
+        </div>
+        <div fxLayout="column">
+            <span >{{card.heading}}</span>
+        </div>
+    </div>
 
 </div>
 

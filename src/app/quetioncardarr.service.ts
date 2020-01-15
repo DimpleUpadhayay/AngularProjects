@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { TopquestionsComponent } from './topquestions/topquestions.component';
+import { HttpClient }from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
@@ -74,7 +75,6 @@ questions = [{
 
     return question;
   }
-
-  constructor() { }
+  constructor(private http:HttpClient) { }
   
 }

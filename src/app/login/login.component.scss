@@ -7,7 +7,8 @@
 button
 {
     background-color:#ffd32a;;
-    color: blue;
+    color: #1a237e;
+    
     margin-right: 50px;
     margin-left:25px;
    // padding: 3px 50px;
@@ -22,7 +23,8 @@ button:hover
 h2,h4{
     margin-top: 30px;
     margin-left: 45px;
-    color: blue;
+color: #1a237e;
+    
 }
 .btn
 {
@@ -39,5 +41,10 @@ form{
     border :2px solid rgb(209, 199, 199);
     box-shadow: 2px 2px 4px #d6d1d1;
     
+
+}
+.fa
+{
+    color: #1a237e;
 
 }

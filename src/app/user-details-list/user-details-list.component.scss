@@ -11,19 +11,21 @@
     backdrop-filter: blur(30px);
     box-shadow: 2px 3px 12px 0 rgba(0,0,0,.16);
     background-color: #fff;
-    min-height:200px;
-    margin: 0 16px 16px 0;
-    padding: 10px 16px 27px 27px;
+    min-height:150px;
+margin-bottom:40px;
+    padding: 16px  16px 0 0;
     width: 100%;
+
     
    }
+
 
 .user
 {
   // background-image:url('/assets/user.jpeg') ;
   border-radius: 60%;
-    width: 50px;
-    height: 50px;
+    width:105px;
+    height:105px;
     object-fit: cover;
     margin-right:10px;
 
@@ -32,6 +34,12 @@
 .userid{
     font-size: 12px;
     color: rgba(0,0,0,.38);
+}
+.user-text
+{
+    font-size: 16px;
+    color: rgba(0,0,0,.38);
+    
 }
 .username
 {
@@ -49,12 +57,14 @@
         width: 18px;
         color: rgba(0,0,0,.6);
         margin-right: 8px;
+        margin-top: 10px;
 }
 .user-country
 {
     font-size: 14px;
     font-weight: 600;
     color: rgba(0,0,0,.6);
+    margin-top: 10px;
 
 }
 .search-container
@@ -82,4 +92,89 @@ border-color:#1a237e;
     color: #1a237e;
     margin-right: -40px;
     margin-bottom: 10px;
+}
+.user-content-card
+{
+    padding: 0 40px 26px;
+}
+.divider
+{
+    border-right: 1px solid rgba(0,0,0,.38);
+    height: 78px;
+    margin-right: 38px;
+    margin-left: 38px;
+}
+.info-card-vote
+{
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    color: rgba(0,0,0,.38);
+}
+
+.active-cat
+{
+ color: #fff;
+ background-color: #5c6bc0;
+ //color: rgba(0,0,0,.6);
+ font-weight: 600;
+ font-size: 14px;
+ padding: 10px 20px;
+ font-family: "Open Sans",sans-serif;
+ margin-right:10px;
+ border-radius: 20px;
+}
+.normal
+{
+ border-radius: 20px;
+ background-color: rgba(0,0,0,.08);
+ color: rgba(0,0,0,.6);
+ font-weight: 600;
+ font-size: 14px;
+ padding: 10px 20px;
+ font-family: "Open Sans",sans-serif;
+ margin-right:10px;
+
+}
+
+.share-lable
+{
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+}
+
+.select-box
+{
+  color: #1a237e!important;
+  font-weight: 600!important;
+  font-size: 14px!important;
+  background-color:#e0e0e0;
+  border: 1px solid rgba(0,0,0,.07)!important
+
+}
+.question-list-card
+{
+     border-radius: 4px;
+     //backdrop-filter: blur(30px);
+     box-shadow: 2px 3px 12px 0 rgba(0,0,0,.16);
+     background-color: #fff;
+     min-height:200px;
+ //margin-bottom:40px;
+     padding: 2px 24px 0;
+     width: 100%;
+ 
+}
+.vote
+{
+    font-size: 14px;
+    color: #1a237e;
+    font-weight: 600;
+    margin-right: 20px;
+}
+.inner-card
+{
+    border-bottom: 1px solid rgba(0,0,0,.16);
+    padding-bottom: 24px;
+
 }
